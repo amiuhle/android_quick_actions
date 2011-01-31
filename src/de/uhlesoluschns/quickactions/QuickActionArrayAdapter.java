@@ -8,16 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-public class QuickActionAdapter extends ArrayAdapter<QuickAction> {
+public class QuickActionArrayAdapter extends ArrayAdapter<QuickAction> {
 	
 	private LayoutInflater mInflater;
 
-	public QuickActionAdapter(Context context, List<QuickAction> quickActions) {
+	public QuickActionArrayAdapter(Context context, List<QuickAction> quickActions) {
 		super(context, R.layout.quick_action_grid_item, R.id.quick_action_label, quickActions);
 		init();
 	}
 
-	public QuickActionAdapter(Context context, QuickAction[] quickActions) {
+	public QuickActionArrayAdapter(Context context, QuickAction[] quickActions) {
 		super(context, R.layout.quick_action_grid_item, R.id.quick_action_label, quickActions);
 		init();
 	}

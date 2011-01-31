@@ -1,6 +1,7 @@
 package de.uhlesoluschns.quickactions;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -42,6 +43,10 @@ public class QuickActionView extends RelativeLayout {
 	
 	public void setIcon(int icon) {
 		mIcon.setImageResource(icon);
+	}
+	
+	public void setIcon(Bitmap icon) {
+		mIcon.setImageBitmap(icon);
 	}
 	
 }

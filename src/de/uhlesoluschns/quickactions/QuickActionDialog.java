@@ -8,15 +8,17 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListAdapter;
 
 public class QuickActionDialog extends Dialog {
 	
 	private static final String TAG = "Troi.QuickActionDialog";
 	
 	private GridView mGrid;
-	private QuickActionAdapter mAdapter;
+	private ListAdapter mAdapter;
 
 	private OnQuickActionSelectedListener mListener;
 
@@ -74,7 +76,7 @@ public class QuickActionDialog extends Dialog {
 		mListener = listener;
 	}
 	
-	public void setAdapter(QuickActionAdapter adapter) {
+	public void setAdapter(ListAdapter adapter) {
 		mAdapter = adapter;
 		if(mGrid != null) {
 			mGrid.setAdapter(mAdapter);
@@ -90,8 +92,8 @@ public class QuickActionDialog extends Dialog {
 	
 	private class QuickActionClickListener implements AdapterView.OnItemClickListener {
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			QuickAction quickAction = (QuickAction) parent.getItemAtPosition(position);
-			selectQuickAction(position, quickAction);
+//			QuickAction quickAction = (QuickAction) parent.getItemAtPosition(position);
+			selectQuickAction(position, /*quickAction*/ null);
 		}
 	}
 	
