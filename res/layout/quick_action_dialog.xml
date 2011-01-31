@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/quick_action_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quick_action_arrow"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:paddingTop="22dip"
+        android:paddingBottom="26dip"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip"
+        android:background="@drawable/quick_action_bg"
+        android:orientation="vertical"
+        >
+
+		<ViewStub 
+			android:id="@+id/quick_action_header"
+			android:layout="@layout/quick_action_header"
+			
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			>
+		</ViewStub>
+
+        <GridView
+            android:id="@+id/quick_action_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quick_action_header"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dip"
+            android:horizontalSpacing="2dip"
+            android:verticalSpacing="4dip"
+            android:numColumns="@integer/quick_action_dialog_columns"
+            android:listSelector="@drawable/quick_action_grid_item_bg"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/quick_action_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="44dip"
+        android:layout_marginBottom="-9dip"
+        android:layout_marginLeft="8.5dip"
+        android:src="@drawable/quick_action_arrow_up"
+        />
+
+</RelativeLayout>

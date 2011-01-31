@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/quick_action_header"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/quick_action_arrow"
+	android:layout_alignParentLeft="true"
+	android:layout_alignParentRight="true"
+	android:layout_alignParentTop="true"
+	>
+
+	<TextView
+		android:id="@+id/quick_action_header_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"
+	    android:paddingLeft="16dip"
+	    android:singleLine="true"
+	    android:gravity="center_vertical|left"
+	    android:textColor="@android:color/primary_text_light"
+	    android:textSize="14dip"
+	/>
+
+	<ImageView
+	    android:id="@+id/corpus_edit_items"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:paddingLeft="6dip"
+	    android:paddingTop="6dip"
+	    android:paddingBottom="6dip"
+	    android:paddingRight="6dip"
+	    android:gravity="center_vertical|right"
+	    android:singleLine="true"
+	    android:clickable="true"
+	    android:focusable="true"
+	    android:src="@drawable/quick_action_edit_icon"
+	    android:background="@drawable/quick_action_edit_items_bg"
+	/>
+</RelativeLayout>
